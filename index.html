@@ -2,13 +2,40 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>jukebox37 - Shared Music</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <script>
+  async function sha256(str) {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+    return [...new Uint8Array(buf)]
+      .map(x => x.toString(16).padStart(2, "0"))
+      .join("");
+  }
+
+  const password_hash = "b4728a4cdc82644eb648f4f4a26844e94557d56356b1b615c6698e81f7907601";
+
+  (async () => {
+    const entry = prompt("Enter password:");
+    if (!entry) {
+      document.body.innerHTML = "<h2>Access denied</h2>";
+      return;
+    }
+    const entry_hash = await sha256(entry);
+    if (entry_hash !== password_hash) {
+      document.body.innerHTML = "<h2>Access denied</h2>";
+    }
+  })();
+  </script>
+
+  <title>jukebox37 - Sharing Music Ideas</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-  <h1>🎵 Music Sharing — jukebox37</h1>
+  <h1>🎵 jukebox37 — Sharing Music Ideas</h1>
   <p>Instrumentals · Vocals · Full Mixes · Lyrics</p>
 </header>
 
@@ -21,7 +48,7 @@
       <a href="mp3/Song_Title_A-Interpret_A_(Instrumental).mp3">Instrumental</a>
       <a href="mp3/Song_Title_A-Interpret_A_(Vocals).mp3">Vocals</a>
       <a href="mp3/Song_Title_A-Interpret_A.mp3">Full Version</a>
-      <a href="songs/song-a-lyrics.html">Lyrics & Chords</a>
+      <a href="songs/song-a-lyrics.html">Lyrics &amp; Chords</a>
       <a href="https://youtube.com/" target="_blank">YouTube</a>
     </div>
   </div>
@@ -33,7 +60,7 @@
       <a href="mp3/Song_Title_B-Interpret_B_(Instrumental).mp3">Instrumental</a>
       <a href="mp3/Song_Title_B-Interpret_B_(Vocals).mp3">Vocals</a>
       <a href="mp3/Song_Title_B-Interpret_B.mp3">Full Version</a>
-      <a href="songs/song-b-lyrics.html">Lyrics & Chords</a>
+      <a href="songs/song-b-lyrics.html">Lyrics &amp; Chords</a>
       <a href="https://youtube.com/" target="_blank">YouTube</a>
     </div>
   </div>
@@ -45,7 +72,7 @@
       <a href="mp3/Song_Title_C-Interpret_C_(Instrumental).mp3">Instrumental</a>
       <a href="mp3/Song_Title_C-Interpret_C_(Vocals).mp3">Vocals</a>
       <a href="mp3/Song_Title_C-Interpret_C.mp3">Full Version</a>
-      <a href="songs/song-c-lyrics.html">Lyrics & Chords</a>
+      <a href="songs/song-c-lyrics.html">Lyrics &amp; Chords</a>
       <a href="https://youtube.com/" target="_blank">YouTube</a>
     </div>
   </div>
@@ -57,7 +84,7 @@
       <a href="mp3/Song_Title_D-Interpret_D_(Instrumental).mp3">Instrumental</a>
       <a href="mp3/Song_Title_D-Interpret_D_(Vocals).mp3">Vocals</a>
       <a href="mp3/Song_Title_D-Interpret_D.mp3">Full Version</a>
-      <a href="songs/song-d-lyrics.html">Lyrics & Chords</a>
+      <a href="songs/song-d-lyrics.html">Lyrics &amp; Chords</a>
       <a href="https://youtube.com/" target="_blank">YouTube</a>
     </div>
   </div>
@@ -69,7 +96,7 @@
       <a href="mp3/Song_Title_E-Interpret_E_(Instrumental).mp3">Instrumental</a>
       <a href="mp3/Song_Title_E-Interpret_E_(Vocals).mp3">Vocals</a>
       <a href="mp3/Song_Title_E-Interpret_E.mp3">Full Version</a>
-      <a href="songs/song-e-lyrics.html">Lyrics & Chords</a>
+      <a href="songs/song-e-lyrics.html">Lyrics &amp; Chords</a>
       <a href="https://youtube.com/" target="_blank">YouTube</a>
     </div>
   </div>
@@ -77,7 +104,7 @@
 </div>
 
 <footer>
-  © 2026 jukebox37 — Music Sharing Site
+  © 2026 jukebox37 — Sharing Music Ideas
 </footer>
 
 </body>
