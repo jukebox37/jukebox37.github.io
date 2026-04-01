@@ -29,7 +29,7 @@ header {
 
 .song-title {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .song-meta {
@@ -40,9 +40,12 @@ header {
 
 .song-desc {
   font-size: 14px;
-  color: #777;
+  color: #666;
   margin-top: 6px;
   margin-bottom: 8px;
+  font-style: italic;
+  padding-left: 4px;
+  border-left: 2px solid #eee;
 }
 
 .song-links a {
