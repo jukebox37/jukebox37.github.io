@@ -4,30 +4,6 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
-
-  <script>
-  async function sha256(str) {
-    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
-    return [...new Uint8Array(buf)]
-      .map(x => x.toString(16).padStart(2, "0"))
-      .join("");
-  }
-
-  const password_hash = "b4728a4cdc82644eb648f4f4a26844e94557d56356b1b615c6698e81f7907601";
-
-  (async () => {
-    const entry = prompt("Enter password:");
-    if (!entry) {
-      document.body.innerHTML = "<h2>Access denied</h2>";
-      return;
-    }
-    const entry_hash = await sha256(entry);
-    if (entry_hash !== password_hash) {
-      document.body.innerHTML = "<h2>Access denied</h2>";
-    }
-  })();
-  </script>
-
   <title>Jukebox37 - Sharing Music Ideas</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -43,61 +19,71 @@
 
   <!-- SONG A -->
   <div class="song-card">
-    <div class="song-title">Song Title A — Interpret A</div>
+    <div class="song-title">Bailando — Enrique Iglesias</div>
+    <div class="song-meta">Latin Pop / Reggaeton · 91 BPM · Em</div>
+    <div class="song-desc">A summer classic with strong rhythm and great energy for live performances.</div>
     <div class="song-links">
-      <a href="mp3/Song_Title_A-Interpret_A_(Instrumental).mp3">Instrumental</a>
-      <a href="mp3/Song_Title_A-Interpret_A_(Vocals).mp3">Vocals</a>
-      <a href="mp3/Song_Title_A-Interpret_A.mp3">Full Mix</a>
+      <a href="mp3/Bailando-Enrique_Iglesias_(Instrumental).mp3">Instrumental</a>
+      <a href="mp3/Bailando-Enrique_Iglesias_(Vocals).mp3">Vocals</a>
+      <a href="mp3/Bailando-Enrique_Iglesias.mp3">Full Mix</a>
       <a href="songs/song-a-lyrics.html">Lyrics &amp; Chords</a>
-      <a href="https://youtube.com/" target="_blank">YouTube</a>
+      <a href="https://youtu.be/NUsoVlDFqZg" target="_blank">YouTube</a>
     </div>
   </div>
 
   <!-- SONG B -->
   <div class="song-card">
-    <div class="song-title">Song Title B — Interpret B</div>
+    <div class="song-title">La Camisa Negra — Juanes</div>
+    <div class="song-meta">Latin Pop / Rock Latino / Cumbia Pop · 97 BPM · F#m</div>
+    <div class="song-desc">A highly recognizable Latin hit with a catchy groove and strong audience appeal.</div>
     <div class="song-links">
-      <a href="mp3/Song_Title_B-Interpret_B_(Instrumental).mp3">Instrumental</a>
-      <a href="mp3/Song_Title_B-Interpret_B_(Vocals).mp3">Vocals</a>
-      <a href="mp3/Song_Title_B-Interpret_B.mp3">Full Mix</a>
+      <a href="mp3/La_Camisa_Negra-Juanes_(Instrumental).mp3">Instrumental</a>
+      <a href="mp3/La_Camisa_Negra-Juanes_(Vocals).mp3">Vocals</a>
+      <a href="mp3/La_Camisa_Negra-Juanes.mp3">Full Mix</a>
       <a href="songs/song-b-lyrics.html">Lyrics &amp; Chords</a>
-      <a href="https://youtube.com/" target="_blank">YouTube</a>
+      <a href="https://youtu.be/Dp9oSi9IpZ8" target="_blank">YouTube</a>
     </div>
   </div>
 
   <!-- SONG C -->
   <div class="song-card">
-    <div class="song-title">Song Title C — Interpret C</div>
+    <div class="song-title">Still Loving You — Scorpions</div>
+    <div class="song-meta">Rock Ballad / Hard Rock · 50–55 BPM · G#m</div>
+    <div class="song-desc">A powerful emotional ballad with a dramatic vocal build-up.</div>
     <div class="song-links">
-      <a href="mp3/Song_Title_C-Interpret_C_(Instrumental).mp3">Instrumental</a>
-      <a href="mp3/Song_Title_C-Interpret_C_(Vocals).mp3">Vocals</a>
-      <a href="mp3/Song_Title_C-Interpret_C.mp3">Full Mix</a>
+      <a href="mp3/Still_Loving_You-Scorpions_(Instrumental).mp3">Instrumental</a>
+      <a href="mp3/Still_Loving_You-Scorpions_(Vocals).mp3">Vocals</a>
+      <a href="mp3/Still_Loving_You-Scorpions.mp3">Full Mix</a>
       <a href="songs/song-c-lyrics.html">Lyrics &amp; Chords</a>
-      <a href="https://youtube.com/" target="_blank">YouTube</a>
+      <a href="https://youtu.be/7pOr3dBFAeY" target="_blank">YouTube</a>
     </div>
   </div>
 
   <!-- SONG D -->
   <div class="song-card">
-    <div class="song-title">Song Title D — Interpret D</div>
+    <div class="song-title">Corazón Espinado — Santana & Maná</div>
+    <div class="song-meta">Latin Rock / Cumbia Rock · 120 BPM · Bm</div>
+    <div class="song-desc">A high-energy Latin-rock fusion with strong guitar presence and rhythmic drive.</div>
     <div class="song-links">
-      <a href="mp3/Song_Title_D-Interpret_D_(Instrumental).mp3">Instrumental</a>
-      <a href="mp3/Song_Title_D-Interpret_D_(Vocals).mp3">Vocals</a>
-      <a href="mp3/Song_Title_D-Interpret_D.mp3">Full Mix</a>
+      <a href="mp3/Corazon_Espinado-Santana_Mana_(Instrumental).mp3">Instrumental</a>
+      <a href="mp3/Corazon_Espinado-Santana_Mana_(Vocals).mp3">Vocals</a>
+      <a href="mp3/Corazon_Espinado-Santana_Mana.mp3">Full Mix</a>
       <a href="songs/song-d-lyrics.html">Lyrics &amp; Chords</a>
-      <a href="https://youtube.com/" target="_blank">YouTube</a>
+      <a href="https://youtu.be/t6omUxqhG78" target="_blank">YouTube</a>
     </div>
   </div>
 
   <!-- SONG E -->
   <div class="song-card">
-    <div class="song-title">Song Title E — Interpret E</div>
+    <div class="song-title">A Matter of Trust — Billy Joel</div>
+    <div class="song-meta">Pop Rock / Soft Rock · 110 BPM · D</div>
+    <div class="song-desc">A steady, upbeat rock track with strong melodic phrasing.</div>
     <div class="song-links">
-      <a href="mp3/Song_Title_E-Interpret_E_(Instrumental).mp3">Instrumental</a>
-      <a href="mp3/Song_Title_E-Interpret_E_(Vocals).mp3">Vocals</a>
-      <a href="mp3/Song_Title_E-Interpret_E.mp3">Full Mix</a>
+      <a href="mp3/A_Matter_of_Trust-Billy_Joel_(Instrumental).mp3">Instrumental</a>
+      <a href="mp3/A_Matter_of_Trust-Billy_Joel_(Vocals).mp3">Vocals</a>
+      <a href="mp3/A_Matter_Of_Trust-Billy_Joel.mp3">Full Mix</a>
       <a href="songs/song-e-lyrics.html">Lyrics &amp; Chords</a>
-      <a href="https://youtube.com/" target="_blank">YouTube</a>
+      <a href="https://youtu.be/6yYchgX1fMw" target="_blank">YouTube</a>
     </div>
   </div>
 
