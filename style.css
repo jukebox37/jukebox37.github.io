@@ -1,3 +1,6 @@
+/* --------------------------------------------------
+   GLOBAL LAYOUT
+-------------------------------------------------- */
 body {
   font-family: Arial, sans-serif;
   background: #fafafa;
@@ -18,6 +21,16 @@ header {
   margin: 30px auto;
 }
 
+footer {
+  text-align: center;
+  font-size: 12px;
+  padding: 20px;
+  color: #777;
+}
+
+/* --------------------------------------------------
+   SONG CARDS (Homepage)
+-------------------------------------------------- */
 .song-card {
   background: white;
   padding: 20px;
@@ -60,9 +73,56 @@ header {
   text-decoration: underline;
 }
 
-footer {
-  text-align: center;
-  font-size: 12px;
+/* --------------------------------------------------
+   LYRICS PAGES
+-------------------------------------------------- */
+
+/* Reduce top/bottom spacing on lyrics pages */
+.lyrics-page .container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Lyrics cue card box */
+.lyrics-container {
+  background: white;
   padding: 20px;
-  color: #777;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Back link below lyrics */
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Chord formatting inside lyrics */
+.chord {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Compact headings and metadata on lyrics pages */
+.lyrics-page h2 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.lyrics-page p {
+  margin-top: 0;
+  margin-bottom: 12px;
 }
