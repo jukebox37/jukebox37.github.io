@@ -4,6 +4,30 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
+
+  <script>
+  async function sha256(str) {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+    return [...new Uint8Array(buf)]
+      .map(x => x.toString(16).padStart(2, "0"))
+      .join("");
+  }
+
+  const password_hash = "b4728a4cdc82644eb648f4f4a26844e94557d56356b1b615c6698e81f7907601";
+
+  (async () => {
+    const entry = prompt("Enter password:");
+    if (!entry) {
+      document.body.innerHTML = "<h2>Access denied</h2>";
+      return;
+    }
+    const entry_hash = await sha256(entry);
+    if (entry_hash !== password_hash) {
+      document.body.innerHTML = "<h2>Access denied</h2>";
+    }
+  })();
+  </script>
+  
   <title>Jukebox37 - Sharing Music Ideas</title>
   <link rel="stylesheet" href="style.css">
 </head>
